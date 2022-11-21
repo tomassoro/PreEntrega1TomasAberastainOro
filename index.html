@@ -14,108 +14,73 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Imagenes\loop.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Trabajo Js</title>
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="icon" href="Imagenes\letter-b.png">
+    <title>BIOS</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark">
-        <a href="index.html">
-            <h1>BIOS </h1>
-        </a>
-        <form class="form-inline" action="/action_page.php">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-success" type="submit">Search</button>
-        </form>
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
-            aria-expanded="true">
-            <i class="menubar fa-solid fa-bars"></i>
-            <!-- <span class="navbar toggler icon"></span> -->
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar"">
-            <ul>
-                <li class=" nav-item">
-            <a href="nav-link">Productos</a>
-            </li>
-            <li class="nav-item">
-                <a href="nav-link">Ofertas</a>
-            </li>
-            <li class="nav-item">
-                <a href="nav-link">Sponsors</a>
-            </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h2>BIOS</h2>
-            <p>La unica empresa de Mar del Plata dedicada exclusivamente al reciclaje</p>
-        </div>
+    <div class="wrapper">
+        <aside class="col-md-3">
+            <header class="header-nav">
+                <div class="logoimg"></div>
+                <h1 class="logo">BIOS</h1>
+            </header>
+            
+            <nav>
+                <ul>
+                    <li><button class="btn btn-outline-success  boton-menu boton-categoria active"> Nuestros productos <i class="bi bi-hand-index-thumb-fill"></i></button></li>
+                    <li><button class="btn btn-outline-success  boton-menu boton-categoria"></i>  Sillas  <i class="bi bi-hand-index-thumb"> </i></button> </li>
+                    <li><button class="btn btn-outline-success  boton-menu boton-categoria"></i>  Macetas <i class="bi bi-hand-index-thumb"> </i> </button></li>
+                    <li><button class="btn btn-outline-success  boton-menu boton-categoria"></i>  BioBolsas <i class="bi bi-hand-index-thumb"> </i> </button></li>
+                    <li><button class="btn btn-outline-success  boton-menu boton-categoria"><a href="carrito.html"><i class="bi bi-cart-dash-fill"></i> Carrito <span class="iteradorCarrito">0</span></a> </button></li>
+                </ul>
+            </nav>
+            <footer>
+                <p> © Derechos reservados a ToroDev</p>
+            </footer>
+        </aside>
+        <main class=" container-fluid col-md-9 maincont" >
+            <div class="cards col-md-8">
+                <h2>Nuestros productos</h2>
+                <div class="producto col-md-2">
+                    <img class="imgproduct" src="Imagenes/Macetas/annie-spratt-IcxBbmxecEM-unsplash.jpg" alt="">
+                    <div class="infoproduct">
+                        <h3>Nombre Producto</h3>
+                        <p>$ Monto</p>
+                        <button class="btn btn-card">Agregar a carrito</button>
+                    </div>
+                </div>
+                <div class="producto col-md-2">
+                    <img class="imgproduct" src="Imagenes/Macetas/annie-spratt-IcxBbmxecEM-unsplash.jpg" alt="">
+                    <div class="infoproduct">
+                        <h3>Nombre Producto</h3>
+                        <p>$ Monto</p>
+                        <button class="btn btn-card">Agregar a carrito</button>
+                    </div>
+                </div>
+                <div class="producto col-md-2">
+                    <img class="imgproduct" src="Imagenes/Macetas/annie-spratt-IcxBbmxecEM-unsplash.jpg" alt="">
+                    <div class="infoproduct">
+                        <h3>Nombre Producto</h3>
+                        <p>$ Monto</p>
+                        <button class="btn btn-card">Agregar a carrito</button>
+                    </div>
+                </div>
+                <div class="producto col-md-2">
+                    <img class="imgproduct" src="Imagenes/Macetas/annie-spratt-IcxBbmxecEM-unsplash.jpg" alt="">
+                    <div class="infoproduct">
+                        <h3>Nombre Producto</h3>
+                        <p>$ Monto</p>
+                        <button class="btn btn-card">Agregar a carrito</button>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-    <section class="container-fluid aboutUs">
-        <h2>Sobre Nosotros</h2>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas distinctio molestias est ullam, blanditiis
-            unde, voluptatibus eligendi repellendus mollitia quis deserunt modi obcaecati saepe dolorum totam illum
-            soluta doloribus similique! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus numquam
-            molestiae laborum molestias aliquid nemo voluptatibus tenetur accusamus corrupti ut quod, qui unde totam sed
-            perferendis laudantium deserunt neque sunt.
-            Numquam ad delectus dolor rem, omnis, voluptatem mollitia, magni optio perspiciatis corrupti ex eveniet
-            nobis temporibus in tenetur dolores! Laudantium numquam reiciendis unde ipsa praesentium ratione
-            exercitationem totam, alias saepe.
-            Nostrum neque, sunt asperiores quis nesciunt quod temporibus culpa excepturi ut non quibusdam magnam
-            laboriosam esse numquam possimus tempore aspernatur voluptates nihil harum minima maxime fugit sint cum qui?
-            Deleniti!accusamus non fuga, expedita laborum minus odio
-            accusantium! Quod.
-            Officia impedit, facere necessitatibus nulla labore esse mollitia voluptates accusantium, nisi assumenda ex
-            et fuga ipsum quo a eaque ratione! Ut quidem soluta ducimus similique perferendis labore corrupti, numquam
-            ullam?
-            Eius, ducimus culpa quasi fugiat consequatur quis ad sunt? Nemo quod temporibus nostrum quae debitis
-            deleniti voluptas asperiores, necessitatibus a! Consequuntur enim, laudantium totam expedita nesciunt dicta!
-            Repudiandae, cum distinctio.
-            Vero iure assumenda, natus, laborum inventore laudantium aliquid consequuntur quod numquam, dolor nostrum!
-            Ipsum quae iure reiciendis aliquam assumenda consequatur fugit voluptatem, modi distinctio libero suscipit
-            qui consectetur excepturi esse.
-            Repellendus sapiente provident eveniet molestias, optio, ipsam fugiat eaque porro consequuntur consectetur
-            amet eligendi quia iste quas odio? Velit facilis nobis blanditiis numquam eaque quo impedit ipsam et ea
-            sunt?
-            Consequuntur, maxime, deleniti aliquam facilis totam vero magnam aspernatur earum quasi magni autem
-            doloribus quod voluptatibus quae ullam asperiores. Repudiandae vero aspernatur harum eum sunt beatae
-            aliquid, temporibus a esse.
-            At, autem? Corrupti fugit illum ea dignissimos ullam libero ex maxime obcaecati ab vero excepturi, sapiente
-            assumenda consequuntur odio iusto vitae neque enim perspiciatis. Iure numquam odit quos temporibus facere?
-            Aperiam delectus qui consectetur libero perspiciatis, nihil necessitatibus nisi dignissimos alias provident
-            eveniet laboriosam nobis rem exercitationem cum perferendis hic minima possimus quod. Placeat quidem
-        </p>
-    </section>
-    <div class="container-fluid productos">
-        <h2>Productos</h2>
-        <div class="cards">
-            <div class="card">
-                <div class="imgcard img1"></div>
-                <h3>Macetas</h3>
-                <p>100% recicladas a base de polietileno</p>
-            </div>
-            <div class="card">
-                <div class="imgcard img1"></div>
-                <h3>Lamparas</h3>
-                <p>100% recicladas a base de polietileno</p>
-            </div>
-            <div class="card">
-                <div class="imgcard img1"></div>
-                <h3>Fundas</h3>
-                <p>100% recicladas a base de polietileno</p>
-            </div>
-            <div class="card">
-                <div class="imgcard img1"></div>
-                <h3>Botellas</h3>
-                <p>100% recicladas a base de polietileno</p>
-            </div>
-        </div>
-    </div>
-    <footer class="footer">
+    <!-- <footer class="footer">
         <p>Derechos reservados por copyright</p>
         <div class="mediacontainer">
             <a class="fb" href="https://www.facebook.com/BRESHING/" target="_blank">
@@ -131,7 +96,7 @@
                 <i class="fa-brands fa-spotify"></i>
             </a>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

@@ -4,152 +4,80 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: rgb(198, 218, 89);
-}
-
-.navbar {
-  width: 100%;
-  height: 15%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.631372549);
-  justify-content: space-between;
   font-family: "Roboto Condensed", sans-serif;
-  z-index: 1;
 }
-.navbar a {
-  text-decoration: none;
+
+h1, h2, h3, h4, h5, h6, p, a, textarea, ul, input {
+  margin: 0;
+  padding: 0;
 }
-.navbar a h1 {
-  padding: 5px 60px 0 20px;
-  color: aliceblue;
-  text-shadow: 1px 1px rgb(39, 38, 38);
-  font-weight: 700;
-  font-size: 3rem;
-  text-decoration: none;
-}
-.navbar a h1:hover {
-  text-decoration: none;
-}
-.navbar a h1:active {
-  color: rgb(54, 53, 53);
-}
-.navbar #collapsibleNavbar {
-  justify-content: flex-end;
-}
-.navbar #collapsibleNavbar ul {
-  padding-right: 50px;
+
+ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 100%;
+}
+
+.wrapper {
+  background-color: #15a612;
+  background-image: linear-gradient(45deg, #15a612 0%, #4fbb17 50%, #03502f 100%);
+  justify-content: space-between;
   display: flex;
   justify-content: space-between;
 }
-.navbar #collapsibleNavbar ul li {
-  font-size: 1.3rem;
-  padding: 10px 10px;
+.wrapper aside {
+  margin-top: 9px;
+  box-shadow: 4px 4px rgba(36, 36, 36, 0.671);
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.863);
+  padding: 0;
+  border-top-right-radius: 3px;
 }
-.navbar #collapsibleNavbar ul li a {
-  color: rgba(240, 248, 255, 0.904);
-  text-decoration: none;
-}
-.navbar #collapsibleNavbar ul li a:hover {
-  color: white;
-  transition: 300ms;
-}
-
-#collapsibleNavbar {
-  justify-content: flex-end;
-}
-
-.menubar {
-  color: aliceblue;
-}
-
-.jumbotron {
-  padding: 15% 0 0 0;
-  height: 400px;
-  font-family: "Roboto Condensed", sans-serif;
-  background-image: url("https://images.unsplash.com/photo-1520279168941-705d206e9064?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-position: 40% 39%;
-  background-size: cover;
+.wrapper aside .header-nav {
+  width: 100%;
   display: flex;
-  align-items: flex-end;
-  opacity: 0.9;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-.jumbotron .container {
-  padding: 0 0 30px 30px;
-  margin: 0;
+.wrapper aside .header-nav .logoimg {
+  background-image: url("Imagenes/letter-b.png");
+  width: 90px;
+  height: 90px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.jumbotron .container h2 {
+.wrapper aside .header-nav .logo {
+  margin-top: 9px;
   font-size: 3rem;
   font-weight: 800;
-  color: rgb(27, 27, 27);
-  text-shadow: 1px 1px rgba(250, 250, 250, 0.836);
-}
-.jumbotron .container p {
-  font-size: 2rem;
-  font-weight: 600;
-  color: rgb(247, 247, 247);
-  text-shadow: 2px 2px rgb(0, 0, 0);
-  padding-left: 15px;
-}
-
-.aboutUs {
-  padding: 20px;
-  font-family: "Roboto Condensed", sans-serif;
-}
-.aboutUs h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: rgb(12, 12, 12);
-  text-shadow: 1px 2px black;
-  margin: 0;
-  padding: 10px 0 20px 0;
-  text-align: center;
-}
-.aboutUs p {
-  text-align: center;
-}
-
-.productos {
-  margin: 0;
-  padding: 20px;
-  background-color: gray;
-  margin-bottom: 40px;
-}
-
-.footer {
-  background-color: rgb(3, 3, 3);
   color: aliceblue;
+  text-shadow: 2px 2px rgb(49, 49, 49);
+  text-align: center;
+  text-transform: uppercase;
+}
+.wrapper aside nav {
   height: auto;
-  padding: 20px 0 10px 0;
-}
-.footer p {
-  font-size: 20px;
-  text-align: center;
-}
-.footer .mediacontainer {
-  text-align: center;
-}
-.footer .mediacontainer a {
-  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
   color: aliceblue;
-  font-size: 30px;
+  text-shadow: none;
 }
-.footer .mediacontainer a.ig:hover {
-  color: rgb(121, 0, 121);
-  transition: all 0.8s;
-}
-.footer .mediacontainer a.fb:hover {
-  color: #4158D0;
-  transition: all 0.8s;
-}
-.footer .mediacontainer a.yt:hover {
-  color: red;
-  transition: all 0.8s;
-}
-.footer .mediacontainer a.sp:hover {
-  color: rgb(5, 151, 5);
-  transition: all 0.8s;
+.wrapper .maincont {
+  background-color: rgba(0, 0, 0, 0.863);
+  margin: 9px 0 0 10px;
+  border-top-left-radius: 3px;
 }/*# sourceMappingURL=styles.css.map */

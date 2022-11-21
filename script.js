@@ -1,10 +1,10 @@
 
-function Saludo(){
-        let hola = String(prompt("Bienvenidos a PolyBristol. Ingrese su nombre de usuario"));
-    alert("Bienvenido " + hola); 
-    console.log("Bienvenido " + hola);
-}
-Saludo();
+// function Saludo(){
+//         let hola = String(prompt("Bienvenidos a PolyBristol. Ingrese su nombre de usuario"));
+//     alert("Bienvenido " + hola); 
+//     console.log("Bienvenido " + hola);
+// }
+// Saludo();
 
 
 class Productos{
@@ -60,9 +60,10 @@ const productos = [
     { nombre : "veladores", precio: 1000, reciclaje : "1000 tapitas de polietileno"}
 ];
 let productoElegido = prompt("Ingrese el producto que desee")
-const producto1 = productos.find((producto) => producto.nombre === productoElegido);  
-console.log(producto1);
+const producto1 = productos.find((producto) => producto.nombre.includes === productoElegido);  
 
+const foundproduct = productos.some((producto) => producto === productoElegido);
+console.log(foundproduct);
 //Buscador por Rango 
 
 // function SumaRango(min,max){

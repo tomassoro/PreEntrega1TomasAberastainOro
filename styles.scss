@@ -1,12 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,800&family=Roboto+Condensed&display=swap');@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,800&family=Roboto+Condensed&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-body{
-    background-color: rgb(198, 218, 89);
+h1, h2, h3, h4, h5, h6, p, a, textarea, ul, input{
+    margin: 0;
+    padding: 0;
 }
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+$color1: aliceblue;
+
 @import "_nav.scss";
 @mixin h2 ($color, $shadow ) {
     font-size: 3rem;
@@ -14,95 +29,105 @@ body{
     color: $color; 
     text-shadow: $shadow;
 }
-@mixin h3 ($color, $shadow ) {
-    font-size: 2rem;
-    font-weight: 600;
+@mixin h4 ($color, $shadow ) {
+    font-size: 1.5rem;
+    font-weight: 400;
     color: $color; 
     text-shadow: $shadow;
     
 }
 // ---------------------------------INDEX
-.jumbotron{
-    padding: 15% 0 0 0;
-    height: 400px;
-    font-family: 'Roboto Condensed', sans-serif;
-    background-image: url("https://images.unsplash.com/photo-1520279168941-705d206e9064?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-    background-position: 40% 39%;
-    background-size: cover;
+.wrapper{
+    background-color: #15a612;
+    background-image: linear-gradient(45deg, #15a612 0%, #4fbb17 50%, #03502f 100%);
+
+    justify-content: space-between;
     display: flex;
-    align-items: flex-end;
-    opacity: .9;
-    .container{
-        padding: 0 0 30px 30px ;
-        margin: 0;
-        h2{
-            @include h2(rgb(27, 27, 27), 1px 1px rgba(250, 250, 250, 0.836));
-        }
-        p{
-            @include h3(rgb(247, 247, 247), 2px 2px rgb(0, 0, 0) ); 
-            padding-left: 15px;
-        }
-    }
-}
-.aboutUs{
-    padding: 20px;
-    font-family: 'Roboto Condensed', sans-serif;
+    justify-content: space-between;
     
-    h2{
-        @include h2(rgb(12, 12, 12), 1px 2px black );
-        margin: 0;
-        padding: 10px 0 20px 0;
-        text-align: center;   
+    aside{
+        margin-top: 9px;
+        box-shadow: 4px 4px rgba(36, 36, 36, 0.671);
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0.863);
+        padding: 0;
+        border-top-right-radius: 3px;
+        .header-nav{
+            width: 100%;
+            display: flex;
+            margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            
+            
+            .logoimg{
+                background-image: url("Imagenes/letter-b.png");
+                width: 90px;
+                height: 90px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .logo{
+                margin-top: 9px;
+                @include h2(aliceblue, 2px 2px rgb(49, 49, 49) );
+                text-align: center;
+                text-transform: uppercase;
+            }
+            
+        }
+        nav{
+            height: auto;
+            @include h4(aliceblue, none )
+        }
+
     }
-    p{
-        text-align: center;
+    .maincont{
+        background-color: rgba(0, 0, 0, 0.863);
+        margin: 9px 0 0 10px;
+        border-top-left-radius: 3px;
     }
 }
-.productos{
-    margin: 0;
-    padding: 20px;
-    background-color: gray;
-    margin-bottom: 40px;
 
 
-}
-.footer{
+// .footer{
     
-    background-color: rgb(3, 3, 3);
-    color: aliceblue;
-    height: auto;
-    padding: 20px 0 10px 0; 
-    p {
-        font-size: 20px;
-        text-align: center;
-    }
-    .mediacontainer{
-        text-align: center;
+//     background-color: rgb(3, 3, 3);
+//     color: aliceblue;
+//     height: auto;
+//     padding: 20px 0 10px 0; 
+//     p {
+//         font-size: 20px;
+//         text-align: center;
+//     }
+//     .mediacontainer{
+//         text-align: center;
         
-        a {
-            text-decoration: none;
-            color: aliceblue;
-            font-size: 30px;
+//         a {
+//             text-decoration: none;
+//             color: aliceblue;
+//             font-size: 30px;
             
-            &.ig:hover {
-                color: rgb(121, 0, 121);
-                transition: all 0.8s;
-            }
-            &.fb:hover {
-                color: #4158D0;
-                transition: all 0.8s;
-            }
-            &.yt:hover {
-                color: red;
-                transition: all 0.8s;
-            }
+//             &.ig:hover {
+//                 color: rgb(121, 0, 121);
+//                 transition: all 0.8s;
+//             }
+//             &.fb:hover {
+//                 color: #4158D0;
+//                 transition: all 0.8s;
+//             }
+//             &.yt:hover {
+//                 color: red;
+//                 transition: all 0.8s;
+//             }
             
-            &.sp:hover {
-                color: rgb(5, 151, 5);
-                transition: all 0.8s;
-            }
-        }
-    }
-}
+//             &.sp:hover {
+//                 color: rgb(5, 151, 5);
+//                 transition: all 0.8s;
+//             }
+//         }
+//     }
+// }
 
 
