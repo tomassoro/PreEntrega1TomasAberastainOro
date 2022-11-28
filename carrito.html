@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
             integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="Css\styles.css">
         <link rel="icon" href="Imagenes\loop.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
@@ -40,11 +40,12 @@
             </footer>
         </aside>
         <main class=" container-fluid col-md-9 mainCont" >
-            <div class="products">
+            <div class="products products-cart row">
                 <h2 class="titleCart"> Carrito</h2>
-                <p> No añadiste ningun producto <i class="bi bi-emoji-expressionless-fill"></i></p>
-                <div class="cartProduct">
-                    <img class="imgCart" src="Imagenes/letter-b.png" alt="">
+                <p class="notAddProduct"> No añadiste ningun producto <i class="bi bi-emoji-expressionless-fill"></i></p>
+                
+                <div class="cartProduct row">
+                    <img class="imgCart" src="Imagenes/BioBolsas/sasha-pestano-W_QZYOVD4xY-unsplash.jpg" alt="">
                     <div class="cartProductName">
                         <small>tittle</small>
                         <h3>Nombre producto</h3>
@@ -58,36 +59,18 @@
                         <h3>$$$$$</h3>
                     </div>
                     <div class="btn btn-trash">
-                        <i class="bi bi-trash"></i>  
+                        <button class="btn btn-danger"><i class="bi bi-trash"></i> </button> 
                     </div>
                 </div>
-                <div class="cartProduct">
-                    <img class="imgCart" src="Imagenes/letter-b.png" alt="">
-                    <div class="cartProductName">
-                        <small>tittle</small>
-                        <h3>Nombre producto</h3>
-                    </div>
-                    <div class="cartProductQuant">
-                        <small>Quantity</small>
-                        <h3>4</h3>
-                    </div>
-                    <div class="cartProductPrice">
-                        <small>Precio</small>
-                        <h3>$$$$$</h3>
-                    </div>
-                    <div class="btn btn-trash">
-                        <i class="bi bi-trash"></i>  
-                    </div>
-                </div>
-                <div class="cartAction">
+                <div class="cartAction row">
                     <div class="cartLeft">
-                        <button class="btn">VACIAR CARRITO</button>
+                        <button class="btn btn-danger vaciarCart">VACIAR CARRITO</button>
                     </div>
-                    <div class="cartRight">
+                    <div class="cartRight row">
                         <div class="cartAction">
                             <p class="total">$1000</p>
                         </div>
-                        <button class="btn cartBuild">
+                        <button id="botonCompra"class="btn btn-success cartBuild">
                             COMPRAR
                         </button>
                     </div>
@@ -95,5 +78,14 @@
 
         </main>
     </div>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="Js\carrito.js"></script>
+
 </body>
 </html>
