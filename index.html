@@ -22,8 +22,8 @@
 </head>
 
 <body>
-    <div class="wrapper container-fluid">
-        <aside class="col-md-3">
+    <div class="wrapper row">
+        <aside class="d-flex col-3 justify-content-space-between">
             <header class="header-nav">
                 <div class="logoimg"></div>
                 <h1 class="logo">BIOS</h1>
@@ -42,24 +42,24 @@
                 <p> © Derechos reservados a ToroDev</p>
             </footer>
         </aside>
-        <main class=" container-fluid col-md-9 mainCont" >
-            <div class="products row">
+        <main class="container-fluid col-9" >
+            <div class="products d-flex col">
                 <h2 class="titulo-principal">Nuestros productos</h2>
-                <div id="contenedorProductos" class="cards">
+                <div id="contenedorProductos" class="d-flex row">
                     <!-- Esto lo rellenamos con JS -->
                 </div>
             </div>
         </main>
     </div>
 
-    <script src="Js\script.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>   
-
+    <script src="./Js/script.js"></script>
 </body>
 
 </html>

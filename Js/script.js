@@ -105,7 +105,7 @@ function cargarProductos(productosElegidos){
     productosElegidos.forEach(producto => {
 
         const div = document.createElement("div");
-        div.classList.add("producto");
+        div.classList.add(`col-lg-4`);
         div.innerHTML = `
             <img class="imgProduct" src="${producto.imagen}" alt="${producto.titulo}">
             <div class="infoProduct">
@@ -171,9 +171,12 @@ function agregarAlCarrito(e){
     actualizarNumerito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+
+    console.log(productosEnCarrito);
 }
 
 function actualizarNumerito(){
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
+
