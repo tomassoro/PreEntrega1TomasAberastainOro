@@ -105,11 +105,15 @@ function cargarProductos(productosElegidos){
     productosElegidos.forEach(producto => {
 
         const div = document.createElement("div");
+        div.classList.add(`card`);
+        div.classList.add(`col-sm-12`);
+        div.classList.add(`col-md-6`);
         div.classList.add(`col-lg-4`);
+        div.classList.add(`col-xl-4`);
         div.innerHTML = `
-            <img class="imgProduct" src="${producto.imagen}" alt="${producto.titulo}">
-            <div class="infoProduct">
-                <h3>${producto.titulo}</h3>
+            <img src="${producto.imagen}" class="card-img-top rounded mx-auto d-block"  alt="${producto.imagen}">
+            <div class="card-body">
+                <h5 class="card-title">${producto.titulo}</h5>
                 <p class="producto-precio">$${producto.precio}</p>
                 <button id="${producto.id}" class="btn producto-agregar btn-light">Agregar a carrito</button>
             </div>

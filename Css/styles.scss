@@ -1,29 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,800&family=Roboto+Condensed&display=swap');@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,800&family=Roboto+Condensed&display=swap');
 
 *{
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Condensed', sans-serif;
 }
 h1, h2, h3, h4, h5, h6, p, a, textarea, ul, input{
     margin: 0;
     padding: 0;
 }
+.row {
+    --bs-gutter-x: 0;
+}
 ul{
     list-style: none;
 }
 a{
-    text-decoration: none;
+    text-decoration: none !important;
 }
-.container-fluid{
-    margin: 0;
-    padding: 0;
+body{
+    background-color: #001166;
+    background-image: linear-gradient(180deg, #001166 0%, #000000 30%, #001006 66%, #006f1b 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
 }
-$color1: aliceblue;
-$green: rgba(28, 104, 28, 0.726); 
-
-
 @mixin h2 ($color, $shadow ) {
     font-size: 3rem;
     font-weight: 800;
@@ -38,150 +39,84 @@ $green: rgba(28, 104, 28, 0.726);
     
 }
 // ---------------------------------INDEX
-.wrapper {
-    background-color: #15a612;
-    background-image: linear-gradient(45deg, #15a612 0%, #4fbb17 50%, #03502f 100%);
+
     
 //INICIO NAV
-    aside {
-        box-shadow: 4px 4px rgba(36, 36, 36, 0.671);
-        position: sticky;
-        top: 5px;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.863);
-        padding-bottom: 20px;
-        border-top-right-radius: 3px;
-
-        .header-nav {
-            width: 100%;
-            display: flex;
-            margin-top: 20px;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-
-
-            .logoimg {
-                background-image: url("Imagenes/letter-b.png");
-                width: 90px;
-                height: 90px;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-
-            .logo {
-                margin-top: 9px;
-                @include h2(aliceblue, 2px 2px rgb(49, 49, 49));
-                text-align: center;
-                text-transform: uppercase;
-            }
+#nav{
+    padding: 5px;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: #2c2b2bde;
+    box-shadow: 0 1px  #000000c2 ;
+    #container-nav{
+        #letter-b{
+            width: 60px;
         }
-
-        nav {
-            height: auto;
-            @include h4(aliceblue, none);
-            display: flex;
-            justify-content: center;
-
-            li {
-                width: 100%;
-
-                .btn {
-                    font-size: 1.3rem;
-                    margin-bottom: 5px;
-
+    }
+    #navbarNavDropdown{
+        .navbar-nav{
+            .dropdown-menu{
+                li{
+                    .boton-carrito{
+                        padding: 0;
+                    }
+                }
+                .dropdown-item:hover{
+                    background-color: transparent;
+                }
+                li {
                     a{
-                        text-decoration: none;
-                        color: aliceblue;
+                    color: aliceblue;
                     }
+                    
                 }
-            }
-
-            footer {
-                p {
-                    color: $green;
-                }
-            }
-        }
-    }
-//FIN DEL NAV
-    .mainCont {
-        margin: 0;
-        
-        .products {
-            padding: 40px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.863);
-            border-top-left-radius: 3px;
-            flex-wrap: wrap;
-            h2 {
-                @include h2(aliceblue, none);
-            }
-
-            .cards {
-                margin-top: 20px;
-                text-align: center;
-                display: grid;
-                grid-template-columns: repeat(3,1fr);
-                gap: 1rem;
-
-                .producto{
-                    .imgProduct {
-                        max-width: 250px;
-                        height: 300px;
-                        border-radius: 1rem;
-                        box-shadow: 2px 2px black;
-                        
-                        
-                    }
-                    .infoProduct{
-                        margin-top: -2rem;
-                        position: relative;
-                        color: aliceblue;
-                        padding:5px 0 10px;
-                        border-radius: 1rem;
-                        box-shadow: 2px 2px black;
-                        background-color:  #2D8A30;
-                    }
-                }
+                
             }
         }
     }
 }
-//CARRITO
-.products-cart{
-    flex-direction: column;
-    .cartProduct{
-        width: 100%;
-        background-color: rgba(34, 34, 34, 0.568);
-        border-radius: 1rem;
+.cont-jumbotron{
+    padding: 10px;
+    .jumbotron{
+        margin-top: 20px;
+        background-image: url("https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1613&q=80");
+        height: 65vh;
+        background-position: 50% 70%;
+        background-size: cover;
+        box-shadow: 2px 3px rgba(0, 0, 0, 0.61);
+    }
+}
+.cont-productos{
+    padding: 20px;
+    #contenedorProductos{
+        flex-wrap: wrap;
+        }
+}
+.card{
+    padding: 10px;
+    max-width: 50vh;
+    .imgProuct{
+        height: 20vh;
+    }
+}
+.mediacontainer{
+    a {
+        text-decoration: none;
         color: aliceblue;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 25px;
-        .imgCart{
-            border-radius: 45%;
-            width: 75px;
-            height: 75px;
+        font-size: 30px;
+        
+        &.ig:hover {
+            color: rgb(121, 0, 121);
+            transition: all 0.8s;
         }
-    }
-    .cartAction{
-        justify-content: space-between;
-        align-items: center;
-        .cartRight{
-            padding: 25px;
-            .total{
-                color: aliceblue;
-                height: 2.5rem;
-                padding: 10px 20px 10px;
-                border-bottom-left-radius: 1rem;
-                background-color: gray;
-            }
+        &.fb:hover {
+            color: #4158D0;
+            transition: all 0.8s;
         }
-
+        &.yt:hover {
+            color: red;
+            transition: all 0.8s;
+        }
     }
 }
-
