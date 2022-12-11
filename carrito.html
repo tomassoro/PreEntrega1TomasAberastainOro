@@ -17,64 +17,26 @@
     <nav class="navbar navbar-expand-lg" id="nav">
         <div class="container-fluid " id="container-nav">
             <a class="navbar-brand fs-1 text-light" href="index.html"><img src="Imagenes/letter-b.png" alt="letter-b" id="letter-b"> Bronco BioShop</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item" id="todos">
-                        <a class="nav-link boton-menu boton-categoria" aria-current="page" id="todos" href="#">Productos</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Categorias
-                        </a>
-                        <ul class="dropdown-menu bg-dark">
-                            <li><a class="dropdown-item boton-menu boton-categoria" id="sillas" href="#">Sillas</a></li>
-                            <li><a class="dropdown-item boton-menu boton-categoria" id="macetas" href="#">Macetas</a></li>
-                            <li><a class="dropdown-item boton-menu boton-categoria" id="biobolsas" href="#">BioBolsas</a></li>
-                        </ul>
-                    </li>
-                    <li><button class="btn btn-outline  boton-menu boton-carrito "><a href="carrito.html"><i class="bi bi-bag-fill"></i> Carrito <span class="iterador-carrito">0</span></a> </button></li>
-                </ul>
+
             </div>
         </div>
     </nav>
     <!-- fin del nav -->
     <div class="container-fluid">
-        <h2 class="text-center text-light fs-1"> Carrito</h2>
-        <p id="carrito-vacio"class="notAddProduct text-center fs-6"> No añadiste ningun producto <i class="bi bi-emoji-expressionless-fill"></i></p>
+        <h2 class="text-center text-light fs-1 mt-5"> Carrito</h2>
+        <p id="carrito-vacio" class="text-center fs-2 mt-5"> No añadiste ningun producto <i class="bi bi-emoji-expressionless-fill"></i></p>
         
-        <div id="carrito-productos" class="contenedor-carrito bg-dark d-flex justify-content-space-arround col">
-            
-            <div class="carrito-producto disabled d-flex container-fluid justify-content-space-arround">
-                
-                <img class="img-fluid img-thumbnail carrito-producto-imagen" src="Imagenes/BioBolsas/sasha-pestano-W_QZYOVD4xY-unsplash.jpg" alt="">
-                <div class="carrito-producto-titulo">
-                    <small>titulo</small>
-                    <h3>Nombre producto</h3>
-                </div>
-                <div class="carrito-producto-cantidad">
-                    <small>cantidad</small>
-                    <h3>4</h3>
-                </div>
-                <div class="carrito-producto-subtotal">
-                    <small>Subtotal</small>
-                    <h3>$$$$$</h3>
-                </div>
-                <button class="btn btn-danger carrito-producto-eliminar"><i class="bi bi-trash"></i> </button>
-            
-            </div>
+        <div id="carrito-productos" class="contenedor-carrito bg-dark d-flex justify-content-space-arround disabled row"> 
+        <!-- ESTO SE COMPLETA CON JS -->
         </div>
-        <div id="carrito-acciones"class="carrito-acciones d-flex">
+
+        <div id="carrito-acciones" class="carrito-acciones d-flex disabled">
             <div class="cartLeft">
                 <button class="btn btn-danger vaciarCart">VACIAR CARRITO</button>
             </div>
             <div class="carrito-derecha d-flex">
                 <div class="cartAction">
-                    <p class="total p-2 text-light fs-5">$1000</p>
+                    <p id="total-compra" class="total p-2 text-light fs-5 disabled">$1000</p>
                 </div>
                 <button id="botonCompra"class="btn btn-success cartBuild">
                     COMPRAR
@@ -83,6 +45,8 @@
         </div>
         <p class="carrito-comprado disabled text-center text-light" id="carrito-comprado">Muchas gracias por tu compra</p>
     </div>
+    </div>
+    
 
     <footer class="footer text-center mt-5 fs-3 bg-dark">
         <p class="text-light">Derechos reservados por copyright</p>
@@ -102,16 +66,6 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="./Js/script.js"></script>
-</body>
-</html>
-
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
-    <script src="sweetalert2.all.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
-    <script src="./Js/script.js"></script>
-
+    <script src="./Js/carrito.js"></script>
 </body>
 </html>
