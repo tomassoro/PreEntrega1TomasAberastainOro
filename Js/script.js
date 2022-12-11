@@ -156,10 +156,11 @@ function actualizarBotonesAgregar(){
     });
 }
 let productosEnCarrito;
-const productosEnCarritoLs = JSON.parse(localStorage.getItem("productos-en-carrito"));
+let productosEnCarritoLs = localStorage.getItem("productos-en-carrito");
+
 
 if(productosEnCarritoLs){
-    productosEnCarrito = productosEnCarritoLs;
+    productosEnCarrito = JSON.parse(productosEnCarritoLs);
     actualizarNumerito();
 }else{
     productosEnCarrito = []
