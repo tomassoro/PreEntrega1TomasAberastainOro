@@ -101,7 +101,7 @@ const numerito = document.querySelector(".iterador-carrito")
 //function: TRAIGO PRODUCTOS Al Dom
 function cargarProductos(productosElegidos){
     
-    contenedorProductos.innerHTML = ``; //de esta forma hago que la propiedad append añada los productos por la catergoria elegida sin que se posicionen abajo de los que ya estaban
+    contenedorProductos.innerHTML = ``; //de esta forma hago que la propiedad append añada los productos por la categoria elegida sin que se posicionen abajo de los que ya estaban
     productosElegidos.forEach(producto => {
 
         const div = document.createElement("div");
@@ -129,8 +129,8 @@ cargarProductos(productos);
 //botones del menu: aplicar un efecto active a cada boton y aplicar un filter
 botonesCategoria.forEach(boton => {
     boton.addEventListener("click", (e) => {
-        botonesCategoria.forEach(boton => boton.classList.remove("active"));
-        e.currentTarget.classList.add("active");
+        // botonesCategoria.forEach(boton => boton.classList.remove("active"));
+        // e.currentTarget.classList.add("active");
         
         if(e.currentTarget.id != "todos"){
         const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
@@ -139,7 +139,7 @@ botonesCategoria.forEach(boton => {
         const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
         cargarProductos(productosBoton)
         }else{
-            tituloPrincipal.innerText = "Todos los productos"
+            tituloPrincipal.innerText = "Nuestros productos"
             cargarProductos(productos);
         }
     })
@@ -160,9 +160,7 @@ const productosEnCarrito = [];
 
 function agregarAlCarrito(e){
     const idBoton = e.currentTarget.id;
-    const productoAgregado = productos.find(producto => producto.id === idBoton);
-
-    
+    const productoAgregado = productos.find(producto => producto.id === idBoton); 
 
     if(productosEnCarrito.some(producto => producto.id === idBoton)){
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
@@ -183,4 +181,7 @@ function actualizarNumerito(){
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
+//Carrito
+const productosEnCarritoCarrito = 
+JSON.parse(localStorage.getItem("productos-en-carrito"));
 
