@@ -1,0 +1,92 @@
+[
+  {
+    "id": "biobolsa 01",
+    "titulo": "BioBolsa Blanca",
+    "imagen": "./Imagenes/BioBolsas/brando-makes-branding-smTDI-z1rlY-unsplash.jpg",
+    "categoria": {
+      "nombre": "BioBolsas",
+      "id": "biobolsas"
+    },
+    "precio": 800
+  },
+  {
+    "id": "biobolsa 02",
+    "titulo": "BioBolsa Negra",
+    "imagen": "./Imagenes/BioBolsas/sasha-pestano-W_QZYOVD4xY-unsplash.jpg",
+    "categoria": {
+      "nombre": "BioBolsas",
+      "id": "biobolsas"
+    },
+    "precio": 800
+  },
+  {
+    "id": "maceta 01",
+    "titulo": "Juego de 3 macetas de 3 litros",
+    "imagen": "./Imagenes/Macetas/annie-spratt-IcxBbmxecEM-unsplash.jpg",
+    "categoria": {
+      "nombre": "Maceta",
+      "id": "macetas"
+    },
+    "precio": 2200
+  },
+  {
+    "id": "maceta 02",
+    "titulo": "Juego de 2 macetas de 4 litros",
+    "imagen": "./Imagenes/Macetas/annie-spratt-JruJFy08KB8-unsplash.jpg",
+    "categoria": {
+      "nombre": "Maceta",
+      "id": "macetas"
+    },
+    "precio": 2600
+  },
+  {
+    "id": "maceta 03",
+    "titulo": "Maceta 800ml",
+    "imagen": "./Imagenes/Macetas/gaelle-marcel-yO9ZVNFbpao-unsplash.jpg",
+    "categoria": {
+      "nombre": "Maceta",
+      "id": "macetas"
+    },
+    "precio": 800
+  },
+  {
+    "id": "maceta 04",
+    "titulo": "Maceta 8 litros",
+    "imagen": "./Imagenes/Macetas/sanni-sahil-LEaK1Lmd1a8-unsplash.jpg",
+    "categoria": {
+      "nombre": "Maceta",
+      "id": "macetas"
+    },
+    "precio": 800
+  },
+  {
+    "id": "Silla 01",
+    "titulo": "Silla estandard ",
+    "imagen": "./Imagenes/Sillas/vincent-botta-J41ffLK_OSM-unsplash.jpg",
+    "categoria": {
+      "nombre": "Silla",
+      "id": "sillas"
+    },
+    "precio": 1500
+  },
+  {
+    "id": "Silla 02",
+    "titulo": "Silla estandard con patas de madera",
+    "imagen": "./Imagenes/Sillas/eugene-chystiakov-3neSwyntbQ8-unsplash.jpg",
+    "categoria": {
+      "nombre": "Silla",
+      "id": "sillas"
+    },
+    "precio": 2600
+  },
+  {
+    "id": "Silla 03",
+    "titulo": "Silla superrior con patas de madera",
+    "imagen": "./Imagenes/Sillas/dillon-mangum-9489sFfgk4c-unsplash.jpg",
+    "categoria": {
+      "nombre": "Silla",
+      "id": "sillas"
+    },
+    "precio": 3200
+  }
+]
