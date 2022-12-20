@@ -6,17 +6,33 @@ let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector(".iterador-carrito")
 
 //function: TRAIGO PRODUCTOS Al Dom
-fetch("./Js/productos.json")
-    .then(response => response.json())
-    .then((data) =>{
-        data.forEach((producto => {
-            const div = document.createElement("div");
-            div.classList.add(`card`);
-            div.classList.add(`col-sm-12`);
-            div.classList.add(`col-md-6`);
-            div.classList.add(`col-lg-4`);
-            div.classList.add(`col-xl-4`);
-            div.innerHTML = `
+const productos = [];
+
+function traerProductos(){
+    fetch("./Js/productos.json")
+        .then(response => response.json())
+        .then((data) =>{
+            data.forEach((producto => {
+                productos.push(producto);
+            })
+        )}
+        )}
+traerProductos();
+
+    
+
+function cargarProductos(productosElegidos){
+
+    contenedorProductos.innerHTML = ``; //de esta forma hago que la propiedad append añada los productos por la categoria elegida sin que se posicionen abajo de los que ya estaban
+    productosElegidos.forEach(producto => {
+    
+        const div = document.createElement("div");
+        div.classList.add(`card`);
+        div.classList.add(`col-sm-12`);
+        div.classList.add(`col-md-6`);
+        div.classList.add(`col-lg-4`);
+        div.classList.add(`col-xl-4`);
+        div.innerHTML = `
             <img src="${producto.imagen}" class="card-img-top rounded mx-auto d-block"  alt="${producto.imagen}">
             <div class="card-body">
                 <h5 class="card-title">${producto.titulo}</h5>
@@ -25,13 +41,14 @@ fetch("./Js/productos.json")
             </div>
         `;
         contenedorProductos.append(div);
-        actualizarBotonesAgregar();
-        }))
-    })
-
-    actualizarBotonesAgregar();
     
+    })
+    actualizarBotonesAgregar();
 
+    }
+    cargarProductos(productos);
+    
+    
 // cargarProductos(productos);
 
 //botones del menu: aplicar un efecto active a cada boton y aplicar un filter
@@ -53,8 +70,9 @@ botonesCategoria.forEach(boton => {
     })
 });
 
+
 // actualizamos botones en cada nuevo objeto que creamos 
-console.log(botonesAgregar);
+
 
 function actualizarBotonesAgregar(){
     botonesAgregar = document.querySelectorAll(".producto-agregar");
@@ -97,5 +115,3 @@ function actualizarNumerito(){
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
-
-
